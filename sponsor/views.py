@@ -40,7 +40,7 @@ class SponsorDetailView(RetrieveAPIView):
 
     def get_queryset(self):
         queryset = self.queryset
-        if self.kwargs.get('slug', None):
+        if self.kwargs.get('slug'):
             queryset = queryset.filter(slug=self.kwargs['slug'])
         return queryset
 
